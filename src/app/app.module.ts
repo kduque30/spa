@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Routes
 import { APP_ROUTING } from './app.routes';
+
+//Servicios
+
+import { HeroesService } from './servicios/heroes.service';
 //Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -18,11 +22,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     AboutComponent,
     HeroesComponent
   ],
-  imports: [
-    BrowserModule,
-    APP_ROUTING
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, APP_ROUTING],
+  providers: [HeroesService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
