@@ -1,7 +1,6 @@
 <h1>Héroes <small>Marvel y DC</small></h1>
 <hr />
 
-<!--let heroe of heroes; let i = index-->
 <div class="row row-cols-1 row-cols-md-2 g-4">
-    <app-heroe-tarjeta [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
 </div>

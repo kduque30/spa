@@ -87,7 +87,7 @@ export class HeroesService {
 }
 
 export interface Heroe {
-  id:number,
+  id: number;
   nombre: string;
   bio: string;
   img: string;
